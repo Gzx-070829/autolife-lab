@@ -74,12 +74,9 @@ const projects = [
 ];
 
 const joinPaths = [
-  ["AI / Python", "AI 学习组"],
-  ["博弈算法", "象棋 AI 项目组"],
-  ["硬件 / 小车", "嵌入式学习组"],
-  ["机器人", "RoboMaster 导向组"],
-  ["GitHub / 文档", "开源协作组"],
-  ["网站 / 推文", "宣传与展示组"],
+  ["AI / Python / 博弈算法", "AI 与软件组"],
+  ["硬件 / 小车 / 机器人", "嵌入式与机器人组"],
+  ["GitHub / 文档 / 网站 / 推文", "开源协作与展示组"],
 ];
 
 const navLinkClass =
@@ -181,12 +178,13 @@ export default function HomePage() {
         </section>
 
         <section id="join" className="mt-6 rounded-3xl border border-line bg-panel p-5 shadow-card sm:mt-8 sm:p-6">
-          <h2 className="text-xl font-semibold">新人路径 Join Us</h2>
+          <h2 className="text-xl font-semibold">新人如何加入</h2>
           <p className="mt-3 text-sm leading-7 text-ink/90">
             你不需要一开始就会 AI、硬件或 Git。可以从 Python、GitHub、Markdown、LED、舵机这些最小任务开始。
-            如果你有基础，可以进入 AI 项目、嵌入式项目、RoboMaster 导向项目或开源协作组。
-            如果你擅长写作、摄影、设计、网站，也可以参与项目文档、推文、作品展示和社团网站建设。
           </p>
+          <p className="mt-3 text-sm leading-7 text-ink/90">如果你对算法、AI、编程感兴趣，可以进入 AI 与软件组。</p>
+          <p className="mt-2 text-sm leading-7 text-ink/90">如果你对硬件、小车、机器人感兴趣，可以进入嵌入式与机器人组。</p>
+          <p className="mt-2 text-sm leading-7 text-ink/90">如果你擅长写作、摄影、设计、网站、资料整理，也可以进入开源协作与展示组。</p>
           <div className="mt-4 overflow-hidden rounded-2xl border border-line/80">
             {joinPaths.map(([from, to]) => (
               <div key={from} className="grid grid-cols-2 border-b border-line/70 bg-base/65 px-4 py-3 text-sm last:border-b-0">
