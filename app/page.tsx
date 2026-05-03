@@ -1,15 +1,13 @@
 const JOIN_FORM_URL = "#join";
 const TRACKS_URL = "#tracks";
-const MEMBERS_URL = "/members";
+const MEMBERS_ARCHIVE_URL = "#contact";
 
 const navItems = [
   { label: "首页", href: "#top" },
-  { label: "关于我们", href: "#about" },
   { label: "学习主线", href: "#tracks" },
-  { label: "项目展示", href: "#projects" },
-  { label: "成长路线", href: "#join" },
+  { label: "项目路线", href: "#projects" },
+  { label: "新人路径", href: "#join" },
   { label: "资源库", href: "#resources" },
-  { label: "成员档案", href: MEMBERS_URL },
   { label: "加入我们", href: JOIN_FORM_URL },
 ];
 
@@ -17,59 +15,55 @@ const tracks = [
   {
     title: "AI Learning",
     description:
-      "从 Python、机器学习、深度学习到博弈算法，依托主流开源教程进行共学与实践，最终设计一个可对战、可展示、可持续优化的中国象棋 AI。",
-    route:
-      "Python 基础 → 机器学习基础 → 深度学习基础 → 井字棋 AI → 五子棋 AI → 中国象棋规则引擎 → 象棋 AI → 在线对战展示平台。",
+      "从编程基础到博弈应用，逐步完成可对战、可展示的象棋 AI 项目。",
+    route: "Python → ML → Deep Learning → Game AI → Chinese Chess AI",
   },
   {
     title: "Embedded & Robotics",
     description:
-      "从 Arduino/ESP32 入门，逐步学习传感器、舵机、电机控制、PID、STM32 和视觉识别，并以 RoboMaster 所需能力为导向开展机器人实践。",
+      "从硬件控制到系统集成，面向 RoboMaster 场景推进机器人实践。",
     route:
-      "Arduino/ESP32 入门 → 传感器与舵机 → 电机控制 → 小车底盘 → PID 控制 → STM32 入门 → 视觉识别 → RoboMaster 导向机器人原型。",
+      "Arduino/ESP32 → Sensors → Motors → PID → STM32 → RoboMaster Prototype",
   },
   {
     title: "Open Workflow",
     description:
-      "学习 Git、GitHub、Markdown、README、项目文档和开源协作流程，把学习内容沉淀为代码仓库、文档、网站和可复用资源。",
-    route: "Git 与 GitHub → Markdown 与 README → 项目文档规范 → 开源协作流程 → 环境配置与 AI 工具辅助学习。",
+      "以 GitHub 为协作中心，将学习过程沉淀为可复用的开源资料。",
+    route: "Git → GitHub → Markdown → README → Project Docs → Open Collaboration",
   },
 ];
 
 const outcomes = [
-  "一份学习笔记",
-  "一个代码仓库",
-  "一份项目文档",
-  "一个可运行 demo",
-  "一次公开展示",
-  "一篇活动总结或技术文章",
+  "学一次，留一份笔记。",
+  "写一次代码，传一个仓库。",
+  "做一次项目，形成一个展示。",
+  "办一次活动，沉淀一套资料。",
 ];
 
 const projects = [
   {
     title: "Chinese Chess AI",
     description:
-      "AI 学习线长期代表项目。从井字棋、五子棋等简单博弈项目入门，逐步学习搜索算法、局面评估、Alpha-Beta 剪枝和深度学习方法，最终完成一个可对战、可展示、可持续优化的中国象棋 AI。",
-    stages:
-      "Tic-Tac-Toe AI → Gomoku AI → Chinese Chess Rule Engine → Search-based Chess AI → Learning-based Chess AI → Web Battle Platform。",
+      "从基础博弈到搜索与评估，持续打磨可展示、可迭代的中国象棋 AI。",
+    stages: "Rules → Search → Evaluation → Playable Demo",
   },
   {
     title: "RoboMaster-oriented Robot",
     description:
-      "嵌入式学习线长期代表项目。以 RoboMaster 所需能力为导向，逐步学习嵌入式开发、电机控制、PID、底盘运动、视觉识别、云台控制和团队协作。",
+      "面向 RoboMaster 导向能力，完成从控制到联调的机器人原型实践。",
     stages:
-      "Arduino/ESP32 Basics → Sensor & Actuator Demos → Mini Car Platform → PID Control → STM32 & Motor Control → Vision Tracking Demo → RoboMaster-oriented Prototype。",
+      "Control Basics → Chassis & PID → STM32 Integration → Prototype",
   },
   {
     title: "Open Learning Archive",
-    description: "用于沉淀学习笔记、代码仓库、项目文档、README、活动资料和展示页面。",
-    stages: "Notes & Docs → Repos & Demos → Activity Materials → Public Showcase。",
+    description: "沉淀笔记、代码、文档与活动资料，形成长期可复用的开放资源。",
+    stages: "Notes → Repos → Docs → Showcase",
   },
   {
     title: "Future: Chess AI Robotic Arm",
     description:
-      "未来融合项目。探索“象棋 AI + 机械臂下棋机器人”，让 AI 不只停留在屏幕中，而是通过硬件真正作用于现实世界。",
-    stages: "当前为长期愿景方向，将在前序能力成熟后逐步探索与验证。",
+      "探索“象棋 AI + 机械臂”融合方向，让算法能力走向实体系统。",
+    stages: "Long-term Vision → Capability Validation",
   },
 ];
 
@@ -123,6 +117,7 @@ export default function HomePage() {
         </header>
 
         <section className="mt-8 rounded-3xl border border-line bg-panel p-5 shadow-card sm:mt-10 sm:p-10">
+          <p className="text-sm text-electric/90">深圳理工大学先行书院学生工程实践社群</p>
           <h1 className="text-[1.75rem] font-semibold leading-tight sm:text-5xl">AutoLife Lab</h1>
           <p className="mt-4 max-w-4xl text-base leading-8 text-ink/90 sm:text-xl">
             以 AI 学习与嵌入式机器人实践为双主线，<br className="hidden sm:block" />以开源协作和成果产出为核心，帮助学生把学习变成项目，把项目变成作品。
@@ -137,10 +132,7 @@ export default function HomePage() {
         <section id="about" className="mt-6 rounded-3xl border border-line bg-panel p-6 shadow-card sm:mt-8">
           <h2 className="text-xl font-semibold">我们是谁</h2>
           <p className="mt-3 text-sm leading-7 text-ink/90">
-            AutoLife Lab 不是传统意义上只研究“自动化专业”的兴趣小组。我们取“自动化”之深意，关注如何通过 AI、嵌入式、机器人、GitHub、开源工具和工程化协作方式，让学习更加系统，让实践更容易产生结果，让个人成长可以被记录和展示。
-          </p>
-          <p className="mt-3 text-sm leading-7 text-ink/90">
-            我们希望每一次学习都能留下笔记，每一次实践都能留下代码，每一个项目都能留下文档，每一次活动都能留下可复用的经验。
+            AutoLife Lab 聚焦 AI 学习线与嵌入式机器人线，通过开源协作与工程化实践，帮助成员持续产出可展示成果。
           </p>
         </section>
 
@@ -158,17 +150,16 @@ export default function HomePage() {
         </section>
 
         <section id="outcomes" className="mt-6 rounded-3xl border border-line bg-panel p-5 shadow-card sm:mt-8 sm:p-6">
-          <h2 className="text-xl font-semibold">学完不是结束，留下成果才是开始</h2>
-          <p className="mt-3 text-sm leading-7 text-ink/90">在 AutoLife，学习不是以“听完”为结束，而是以“留下成果”为开始。我们鼓励每位成员形成：</p>
-          <ul className="mt-4 grid gap-3 text-sm sm:grid-cols-2">
+          <h2 className="text-xl font-semibold">成果导向</h2>
+          <ul className="mt-4 grid gap-3 text-sm">
             {outcomes.map((item) => (
-              <li key={item} className="rounded-xl border border-line/80 bg-base/65 px-4 py-3">- {item}</li>
+              <li key={item} className="border-l-2 border-electric/70 pl-3 text-ink/90">{item}</li>
             ))}
           </ul>
         </section>
 
         <section id="projects" className="mt-6 rounded-3xl border border-line bg-panel p-5 shadow-card sm:mt-8 sm:p-6">
-          <h2 className="text-xl font-semibold">项目路线图 Projects</h2>
+          <h2 className="text-xl font-semibold">长期项目路线</h2>
           <div className="mt-4 grid gap-4 md:grid-cols-2">
             {projects.map((project) => (
               <article key={project.title} className="rounded-2xl border border-line/90 bg-base/65 p-4">
@@ -181,12 +172,7 @@ export default function HomePage() {
         </section>
 
         <section id="join" className="mt-6 rounded-3xl border border-line bg-panel p-5 shadow-card sm:mt-8 sm:p-6">
-          <h2 className="text-xl font-semibold">新人路径 Join Us</h2>
-          <p className="mt-3 text-sm leading-7 text-ink/90">
-            你不需要一开始就会 AI、硬件或 Git。可以从 Python、GitHub、Markdown、LED、舵机这些最小任务开始。
-            如果你有基础，可以进入 AI 项目、嵌入式项目、RoboMaster 导向项目或开源协作组。
-            如果你擅长写作、摄影、设计、网站，也可以参与项目文档、推文、作品展示和社团网站建设。
-          </p>
+          <h2 className="text-xl font-semibold">新人如何加入</h2>
           <div className="mt-4 overflow-hidden rounded-2xl border border-line/80">
             {joinPaths.map(([from, to]) => (
               <div key={from} className="grid grid-cols-2 border-b border-line/70 bg-base/65 px-4 py-3 text-sm last:border-b-0">
@@ -199,14 +185,20 @@ export default function HomePage() {
 
         <section id="members" className="mt-6 rounded-3xl border border-line bg-panel p-5 shadow-card sm:mt-8 sm:p-6">
           <h2 className="text-xl font-semibold">成员档案入口</h2>
-          <p className="mt-3 text-sm leading-7 text-ink/90">成员详情请前往独立档案页查看，我们在首页只保留入口，持续更新每届成员成长记录。</p>
-          <a className={`mt-4 inline-flex ${actionLinkClass} border-electric bg-electric/15 text-electric hover:bg-electric/25`} href={MEMBERS_URL}>查看 /members</a>
+          <p className="mt-3 text-sm leading-7 text-ink/90">历代成员、项目经历与贡献记录将整理在独立档案中。后续会通过专门页面或外部链接开放查看。</p>
+          <a className={`mt-4 inline-flex ${actionLinkClass} border-electric bg-electric/15 text-electric hover:bg-electric/25`} href={MEMBERS_ARCHIVE_URL}>成员档案建设中</a>
         </section>
 
         <section id="resources" className="mt-6 rounded-3xl border border-line bg-panel p-5 shadow-card sm:mt-8 sm:p-6">
           <h2 className="text-xl font-semibold">资源库与 GitHub</h2>
           <p className="mt-3 text-sm leading-7 text-ink/90">GitHub 是工作台，网站是展示窗。</p>
           <p className="mt-2 text-sm leading-7 text-ink/90">GitHub 承担项目代码、学习资料、README、活动文档和路线图；网站承担对外展示、招新宣传、项目介绍、成果展示和成长记录。</p>
+          <a
+            className={`mt-4 inline-flex ${actionLinkClass} border-electric bg-electric/15 text-electric hover:bg-electric/25`}
+            href="https://github.com/Gzx-070829/autolife-lab"
+          >
+            查看 GitHub 仓库
+          </a>
         </section>
 
         <section id="contact" className="mt-6 rounded-3xl border border-line bg-panel p-5 shadow-card sm:mt-8 sm:p-6">
