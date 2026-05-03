@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "自动化社 | Build Real Systems",
-  description: "Build Real Systems. 让想法接上电源，让系统开始运行。",
+  title: "AutoLife Lab",
+  description: "以 AI 学习与嵌入式机器人实践为双主线，以开源协作和成果产出为核心。",
 };
 
 export default function RootLayout({
